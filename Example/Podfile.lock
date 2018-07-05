@@ -1,0 +1,16 @@
+PODS:
+  - MLIndicatorView (0.1.0)
+
+DEPENDENCIES:
+  - MLIndicatorView (from `../`)
+
+EXTERNAL SOURCES:
+  MLIndicatorView:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  MLIndicatorView: 8cd088c4c6a8f80ff4f03a35e526b5e3da53b51c
+
+PODFILE CHECKSUM: ac37fd9e52aa498f5d85f88d51e9d61981f6e89d
+
+COCOAPODS: 1.5.0
