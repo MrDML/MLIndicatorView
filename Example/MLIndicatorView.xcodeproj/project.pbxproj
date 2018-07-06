@@ -42,10 +42,10 @@
 		607FACE51AFB9204008FA782 /* MLIndicatorView_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MLIndicatorView_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		61562FBF4393A3146B70185C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		61562FBF4393A3146B70185C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		99B47BD96D8A59C95444AC63 /* Pods-MLIndicatorView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MLIndicatorView_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MLIndicatorView_Example/Pods-MLIndicatorView_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		B13F35460C335A5486131631 /* MLIndicatorView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = MLIndicatorView.podspec; path = ../MLIndicatorView.podspec; sourceTree = "<group>"; };
-		B64454E054C84EF2E2794E8F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		B13F35460C335A5486131631 /* MLIndicatorView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = MLIndicatorView.podspec; path = ../MLIndicatorView.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B64454E054C84EF2E2794E8F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		C1A9F38C6E476553BE96A709 /* Pods_MLIndicatorView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MLIndicatorView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 

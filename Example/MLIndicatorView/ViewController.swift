@@ -7,17 +7,15 @@
 //
 
 import UIKit
-
+import MLIndicatorView
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+         let indicatorView = MLIndicatorView.init(frame: CGRect.init(x: 100, y: 100, width: 30  , height: 30), tintColor: UIColor.red, indicatorStyle: .MLIndicatorStyleCyclingLine, indicatorOptional: nil)
+         indicatorView.startIndicatorAnimation()
+        self.view.addSubview(indicatorView)
     }
 
 }
