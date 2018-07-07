@@ -193,39 +193,8 @@ class MLCyclingLine: UIView,MLIndicatorViewProtocol {
         reLayer.instanceCount = optionalTem.reConut
         reLayer.position = CGPoint.init(x: size.width * 0.5, y: size.height * 0.5)
         reLayer.backgroundColor = UIColor.clear.cgColor
-        /**
-         指定复制副本之间的延迟（以秒为单位）。动画。
-         默认值为0.0，表示将同步添加到复制副本的任何动画。
-         以下代码显示了用于创建动画活动监视器的复制器层。 复制器层创建30个小圆圈，形成一个更大的圆圈。 源图层圆圈具有1秒的动画淡出效果，每个副本将动画的时间偏移1/30秒。
-         let replicatorLayer = CAReplicatorLayer()
-         
-         let circle = CALayer()
-         circle.frame = CGRect(origin: CGPoint.zero,
-         size: CGSize(width: 10, height: 10))
-         circle.backgroundColor = NSColor.blue.cgColor
-         circle.cornerRadius = 5
-         circle.position = CGPoint(x: 0, y: 50)
-         replicatorLayer.addSublayer(circle)
-         
-         let fadeOut = CABasicAnimation(keyPath: "opacity")
-         fadeOut.fromValue = 1
-         fadeOut.toValue = 0
-         fadeOut.duration = 1
-         fadeOut.repeatCount = Float.greatestFiniteMagnitude
-         circle.add(fadeOut, forKey: nil)
-         
-         
-         let instanceCount = 30
-         replicatorLayer.instanceCount = instanceCount
-         replicatorLayer.instanceDelay = fadeOut.duration / CFTimeInterval(instanceCount)
-         
-         let angle = -CGFloat.pi * 2 / CGFloat(instanceCount)
-         replicatorLayer.instanceTransform = CATransform3DMakeRotation(angle, 0, 0, 1)
-         so animation.duration = Double(optional.reConut) / Double(10) 需要对应
-         */
         reLayer.instanceDelay =  optionalTem.duration / Double(optionalTem.reConut)
         
-        /// 每个复制层的角度值
         let angle = CGFloat.pi * 2 / CGFloat(optionalTem.reConut)
         reLayer.instanceTransform = CATransform3DMakeRotation(angle, 0, 0, 1)
         
@@ -334,7 +303,7 @@ class MLCyclingScale: UIView,MLIndicatorViewProtocol {
         
         reLayer.instanceDelay =  optionalTem.duration / CFTimeInterval(optionalTem.reConut)
         
-        /// 每个复制层的角度值
+
          let angle = CGFloat.pi * 2 / CGFloat(optionalTem.reConut)
          reLayer.instanceTransform = CATransform3DMakeRotation(angle, 0, 0, 1)
          superLayer.addSublayer(reLayer)
@@ -411,7 +380,7 @@ class MLTranslation: UIView,MLIndicatorViewProtocol {
         self.realLayer = CALayer.init()
         
         self.realLayer.bounds = CGRect.init(x: 0, y: 0, width: optional.itemSize.width, height: optional.itemSize.height)
-        // 第一个的中心点位置 optional.itemSize.width * 0.5
+
         self.realLayer.position = CGPoint.init(x: optional.itemSize.width * 0.5, y: size.height * 0.5)
         self.realLayer.backgroundColor = color.cgColor
 
@@ -430,7 +399,6 @@ class MLTranslation: UIView,MLIndicatorViewProtocol {
         animation.toValue = 1
         animation.duration =  optional.duration
         animation.repeatCount = MAXFLOAT
-//        autoreverses动画结束时是否执行逆动画
         animation.autoreverses = true
         self.realLayer.add(animation, forKey: "animation")
         
