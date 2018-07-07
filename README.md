@@ -5,6 +5,13 @@
 [![License](https://img.shields.io/cocoapods/l/MLIndicatorView.svg?style=flat)](https://cocoapods.org/pods/MLIndicatorView)
 [![Platform](https://img.shields.io/cocoapods/p/MLIndicatorView.svg?style=flat)](https://cocoapods.org/pods/MLIndicatorView)
 
+
+
+
+## Preview
+
+![Demo](https://github.com/MrDML/MLIndicatorView/blob/master/MLIndicatorViewGif.gif)
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
