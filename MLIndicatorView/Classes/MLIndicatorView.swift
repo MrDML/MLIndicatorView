@@ -15,14 +15,21 @@ import UIKit
 }
 
 @objc open class MLIndicatorOptional: NSObject {
-    // 线条宽度
-    var lineWidth:CGFloat
-    var reConut: Int
-    var itemSize: CGSize
-    var duration:CFTimeInterval
+    
+    /// 线宽
+   public var lineWidth:CGFloat
+    
+    /// 点 size 宽高 需要相等
+   public var itemSize: CGSize
+    
+    /// 复制图层数量
+   public var reConut: Int
+    
+    /// 动画时间
+   public var duration:CFTimeInterval
     
     
-    init(lineWidth width:CGFloat,reConut count:Int, size:CGSize, duration:CFTimeInterval) {
+   public init(lineWidth width:CGFloat,reConut count:Int, size:CGSize, duration:CFTimeInterval) {
         self.reConut = count
         self.lineWidth = width
         self.itemSize = size
@@ -44,15 +51,19 @@ open class MLIndicatorView: UIView {
     let indicatorStyle:MLIndicatorStyle
     var indicatorProtocol:MLIndicatorViewProtocol! = nil
     let indicatorColor:UIColor
-    let indicatorFrame:CGRect
+    var indicatorFrame:CGRect
     let indicatorOptional:MLIndicatorOptional?
     var object:AnyObject! = nil
-    var isAnimating:Bool // 是否正在动画
+    var isAnimating:Bool
     
     
     
     public init(frame: CGRect ,tintColor color: UIColor ,indicatorStyle style:MLIndicatorStyle,indicatorOptional optional:MLIndicatorOptional?) {
-        indicatorFrame = frame
+        if frame.size.width.isEqual(to: frame.size.height) == false {
+            indicatorFrame = CGRect.init(x: frame.origin.x, y: frame.origin.y, width: frame.size.width, height: frame.size.width)
+        }else{
+            indicatorFrame = frame
+        }
         indicatorColor = color
         indicatorStyle = style
         indicatorOptional = optional
@@ -121,12 +132,9 @@ open class MLIndicatorView: UIView {
         return object
     }
     
-    
-    
-   /// 开始动画
+
     public func startIndicatorAnimation(){
-        // 这个值一定要清空
-         self.layer.sublayers = nil;
+        self.layer.sublayers = nil;
         self.setIndicatorNormalState()
         self.object = self.getIndicatorOptionalWithStyle(style: indicatorStyle)
         self.indicatorProtocol = self.object as! MLIndicatorViewProtocol
@@ -139,7 +147,7 @@ open class MLIndicatorView: UIView {
         
     }
     
-    /// 停止动画
+
     public func stopIndicatorAnimation(){
         
         if self.isAnimating == true {
@@ -168,10 +176,7 @@ open class MLIndicatorView: UIView {
         self.layer.opacity = 0
         self.layer.sublayers = nil
     }
-    
-    
-   
-    
+
 }
 
 
@@ -401,9 +406,7 @@ class MLTranslation: UIView,MLIndicatorViewProtocol {
         animation.repeatCount = MAXFLOAT
         animation.autoreverses = true
         self.realLayer.add(animation, forKey: "animation")
-        
-        
-        
+
     }
     
     func removeAnimation() {
