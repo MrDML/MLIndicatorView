@@ -20,6 +20,17 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 ## Use
 
 ```Swift
+override func viewDidLoad() {
+super.viewDidLoad()
+
+// 自定义
+exampleDemo_Custome()
+
+// 默认值
+exampleDemo_Default()
+
+}
+
 /// 使用自定义的值
 func exampleDemo_Custome(){
 
