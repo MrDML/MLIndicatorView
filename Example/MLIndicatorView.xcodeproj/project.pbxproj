@@ -171,6 +171,7 @@
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
 				45CEB0FF9D0E8E74CE4E0F99 /* [CP] Embed Pods Frameworks */,
+				50341E25EB3178AE8E446673 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -189,6 +190,8 @@
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
+				38992FCBF240C4BE9D5D9826 /* [CP] Embed Pods Frameworks */,
+				5D993871E236A36FEC209CAD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -279,6 +282,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		38992FCBF240C4BE9D5D9826 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MLIndicatorView_Tests/Pods-MLIndicatorView_Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		45CEB0FF9D0E8E74CE4E0F99 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -295,6 +313,36 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MLIndicatorView_Example/Pods-MLIndicatorView_Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		50341E25EB3178AE8E446673 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MLIndicatorView_Example/Pods-MLIndicatorView_Example-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5D993871E236A36FEC209CAD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MLIndicatorView_Tests/Pods-MLIndicatorView_Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8433707B3847BF7D835CC080 /* [CP] Check Pods Manifest.lock */ = {
