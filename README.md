@@ -10,7 +10,7 @@
 
 ## Preview
 
-![Demo](https://github.com/MrDML/MLIndicatorView/blob/master/MLIndicatorViewGif.gif)
+![Demo](https://github.com/MrDML/MLIndicatorView/blob/master/MLIndicatorViewGif.gif) ![Demo](https://github.com/MrDML/MLIndicatorView/blob/master/MLIndicatorViewCustomeGif.gif)
 
 ## Example
 
