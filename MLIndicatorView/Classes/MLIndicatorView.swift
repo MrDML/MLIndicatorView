@@ -2,7 +2,7 @@
 //  MLIndicatorView.swift
 //  MLIndicatorView
 //
-//  Created by 戴明亮 on 2018/7/5.
+//  Created by MrDML on 2018/7/5.
 //
 
 import UIKit
@@ -74,8 +74,14 @@ open class MLIndicatorView: UIView {
 
     }
     
-    public convenience init(tintColor color: UIColor ,indicatorStyle style:MLIndicatorStyle ,indicatorOptional optional:MLIndicatorOptional?) {
-        self.init(frame: CGRect.zero, tintColor: color, indicatorStyle: style, indicatorOptional: optional)
+    public convenience init(tintColor color: UIColor ,indicatorStyle style:MLIndicatorStyle,indicatorSize size:CGSize, indicatorOptional optional:MLIndicatorOptional?) {
+        let sizeTemp:CGSize
+        if size.width.isEqual(to: size.height) == false{
+           sizeTemp = CGSize.init(width: size.width, height: size.width)
+        }else{
+            sizeTemp = size
+        }
+        self.init(frame: CGRect.init(x: 0, y: 0, width: sizeTemp.width, height:sizeTemp.height), tintColor: color, indicatorStyle: style, indicatorOptional: optional)
         
     }
     

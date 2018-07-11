@@ -16,12 +16,15 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // 自定义
+        // Custome
         exampleDemo_Custome()
         
-        // 默认值
-//        exampleDemo_Default()
+        // initialize
+        // exampleDemo_de()
         
+        // other initialize
+        initializeStyle()
+     
     }
     
     
@@ -69,6 +72,13 @@ class ViewController: UIViewController {
         self.view.addSubview(indicatorView_FourStyle)
     }
     
+    
+    func initializeStyle(){
+        let indicatorView = MLIndicatorView.init(tintColor: UIColor.red, indicatorStyle: .MLIndicatorStyleCyclingLine, indicatorSize: CGSize.init(width: 30, height: 30), indicatorOptional: nil)
+        indicatorView.center = CGPoint.init(x: UIScreen.main.bounds.width * 0.5, y: UIScreen.main.bounds.height * 0.5)
+        self.view.addSubview(indicatorView)
+        indicatorView.startIndicatorAnimation()
+    }
     
 
     
